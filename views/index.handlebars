@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <img src="/assets/img/burger.png">
+      <h2>Burgers!</h2>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class='col-sm-6 col-md-6 col-lg-6'>
+      <h3>Burgers Ordered!</h3>
+      <ol>
+        {{#each burgs}}
+          {{#unless devoured}}
+            {{> burgers/burger-block order=true}}
+          {{/unless}}
+        {{/each}}
+      </ol>
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-6">
+      <h3>Burgers Devoured!</h3>
+      <ol>
+        {{#each burgs}}
+          {{#if devoured}}
+            {{> burgers/burger-block order=false}}
+          {{/if}}
+        {{/each}}
+      </ol>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 form">
+      <h2>Order a Burger</h2>
+      <form class="create-form">
+
+        <div class="form-group">
+          <label for="bur"></label>
+          <textarea type="text" class="textarea" id="bur" name="name"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success">Order</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+  
+
+
+

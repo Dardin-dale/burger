@@ -48,7 +48,7 @@ var orm = {
         query += sqlHide(vals.length);
         query += ") ";
 
-        console.log(query);
+        console.log(query , vals);
 
         connection.query(query, vals, function(err, result) {
             if (err) throw err;

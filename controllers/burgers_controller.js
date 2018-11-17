@@ -1,7 +1,7 @@
 /*Burger Controller gets routing requests from client
 and sends the request to the database for retrieval*/
 
-var express = require('exrpress');
+var express = require('express');
 var router = express.Router();
 
 var burger = require('../models/burger.js');
@@ -12,11 +12,12 @@ router.get('/', function(req, res) {
         var burgs = {burgs:data};
         console.log(burgs);
         res.render('index', burgs);
-    })
+    });
 });
 
 //adds new burger to database
 router.post('/api/burger', function(req,res) {
+    console.log(req.body);
     burger.insert(['burger_name', 'devoured'],
     [req.body.name, req.body.devoured], function(result) {
         //sends back id of new burger

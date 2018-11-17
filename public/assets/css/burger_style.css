@@ -1,0 +1,33 @@
+body {
+    max-width: 960px;
+    background-color: sandybrown;
+    margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4{
+    margin:10px auto;
+}
+
+img {
+    margin-left: 35%;
+    width: 250px;
+    height: 200px;
+}
+
+.row {
+    margin: auto;
+    display: block;
+    /* align-content: center; */
+}
+.col {
+    align-content: center;
+    /* display:inline-block; */
+    margin: auto;
+}
+
+.form {
+    margin-left: 35%;
+}
